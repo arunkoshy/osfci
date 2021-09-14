@@ -379,7 +379,7 @@ function myAccountCol1()
         var form='<h1> Welcome back ' + mylocalStorage['username'] + '</h1>';
         form = form + '<form id="myAccount"border-radius:3px; width:90%;">'
         // We have to create a Form where the user can see all the data that we have about him
-        var Url = '/user/'+mylocalStorage['username']+'/userGetInfo';
+        var Url = '/user/'+mylocalStorage['username']+'/userGetInternalInfo';
         jQuery.ajaxSetup({async:false});
 	BuildSignedAuth(Url, 'GET' , "application/json", function(authString) {
         $.ajax({
