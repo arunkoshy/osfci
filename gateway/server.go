@@ -192,7 +192,7 @@ func checkAccess(w http.ResponseWriter, r *http.Request, login string, command s
 
 			username := login
 
-			result := base.HTTPGetRequest("http://" + r.Host + ":9100" + "/user/" + username + "/userGetInternalInfo")
+			result := base.HTTPGetRequest("http://" + r.Host + ":9100" + "/user" + username + "/userGetInternalInfo")
 
 			var returnData *base.User
 			returnData = new(base.User)
